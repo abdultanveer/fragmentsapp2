@@ -1,6 +1,7 @@
 package com.example.fragmentsapp;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +17,20 @@ import android.widget.Toast;
  */
 public class HeadlinesFragment extends Fragment implements AdapterView.OnItemClickListener {
     ListView headlinesListView;
+    OnHeadlineSelectedListener callback;
+
+
+    public interface OnHeadlineSelectedListener {
+        public void onArticleSelected(String headline);
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+       callback = (OnHeadlineSelectedListener) getActivity();
+    }
 
     public HeadlinesFragment() {
         // Required empty public constructor
@@ -37,6 +52,8 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
-        Toast.makeText(getContext(), item, Toast.LENGTH_SHORT).show();
+        callback.onArticleSelected(item);//a
+
+      //  Toast.makeText(getContext(), item, Toast.LENGTH_SHORT).show();
     }
 }
