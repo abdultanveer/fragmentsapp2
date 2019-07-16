@@ -3,11 +3,13 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <fragment
+        android:id="@+id/headlinesfragment"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:name="com.example.fragmentsapp.HeadlinesFragment"
         android:layout_height="match_parent"/>
     <fragment
+        android:id="@+id/detailsFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:name="com.example.fragmentsapp.DetailsFragment"
