@@ -24,6 +24,7 @@ TextView detailsTextView;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //FragmentDetailsScreen fragmentDetailsScreen = new FragmentDetailsScreen(getContext());
         View view = inflater.inflate(R.layout.fragment_details, container, false);
         detailsTextView = view.findViewById(R.id.newsDetailsTextview);
         return view;

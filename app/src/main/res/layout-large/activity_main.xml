@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <fragment
+   <!-- if you add the fragments in xml  statically-->
+    <fragment   
         android:id="@+id/headlinesfragment"
         android:layout_width="0dp"
         android:layout_weight="1"
